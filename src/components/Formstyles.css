@@ -1,0 +1,25 @@
+.form{
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+
+}
+
+.formbox{
+    margin: 4rem 6rem;
+    color: #2a2a2a;
+}
+
+.form input{
+    height: 1rem;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+    border-radius: 0.3rem;
+    border: 1px solid #2a2a2a;
+    accent-color: rgb(5, 226, 5);
+    margin-left: 1rem;
+    
+}
+
