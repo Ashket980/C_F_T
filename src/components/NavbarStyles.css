@@ -82,7 +82,7 @@ button:hover{
       .mobile-title {
         display: inline;
       }
-      
+
     .nav-menu{
         display: flex;
         flex-direction: column;
@@ -150,3 +150,12 @@ display: none;
         color: black;
     }
 }
+
+@media screen and (min-width: 851px) {
+    .desktop-title {
+      display: inline;
+    }
+    .mobile-title {
+      display: none;
+    }
+  }
