@@ -19,7 +19,10 @@ class Navbar extends Component {
     };
     return (
       <nav className="NavbarItems">
-        <h1 className="navbar-logo">Carbon Footprint Tracker</h1>
+        <h1 className="navbar-logo">
+        <span className="desktop-title">Carbon Footprint Tracker</span>
+        <span className="mobile-title">CFT</span>
+        </h1>
 
         <div className="menu-icons" onClick={this.handleClick}>
           <i className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}></i>

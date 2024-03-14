@@ -70,9 +70,19 @@ button:hover{
 }
 
 @media screen and (max-width:850px) {
+
+
     .NavbarItems{
         z-index: 99;
     }
+
+    .desktop-title {
+        display: none;
+      }
+      .mobile-title {
+        display: inline;
+      }
+      
     .nav-menu{
         display: flex;
         flex-direction: column;
