@@ -7,7 +7,7 @@ import {Helmet} from "react-helmet";
 import Form from "../components/Form"
 // import styled from "styled-components"
 import "../components/AboutUsStyles.css"
-
+import PieChart from "../components/PieChart";
 
 
 function Service() {
@@ -27,7 +27,7 @@ function Service() {
     />
 
     <Form/>
-
+    <PieChart/>
     <div className="about-container">
       
       <h1>How to reduce your carbon footprint at home</h1>

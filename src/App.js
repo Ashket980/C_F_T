@@ -17,11 +17,12 @@ export default function App() {
       <Route path="/signup" exact element={<Signup />} />
 			<Route path="/login" exact element={<Login />} />
 			
-        {user && <Route path="/" element={<Home/>}/>}
+        {/* {user && <Route path="/" element={<Home/>}/>} */}
+        <Route path="/" element={<Home/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/service" element={<Service/>}/>
         <Route path="/contact" element={<Contact/>}/>
-        <Route path="/" element={<Navigate replace to ="/login"/>}/>
+        {/* <Route path="/" element={<Navigate replace to ="/login"/>}/> */}
       </Routes>
       
     </div>

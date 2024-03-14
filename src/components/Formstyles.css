@@ -4,12 +4,17 @@
     flex-direction: column;
     width: 50%;
     margin: auto;
-
+    
 }
 
 .formbox{
     margin: 4rem 6rem;
     color: #2a2a2a;
+    background-image: url(https://cdn.dribbble.com/users/2161686/screenshots/15263769/dribbble_tropicalbg.jpg);
+    background-repeat: no-repeat;
+    padding: 25px;
+    border-radius: 20px;
+
 }
 
 .form input{
@@ -23,3 +28,15 @@
     
 }
 
+#input{
+    height: 30px;
+    border: 2px solid greenyellow;
+    background-color: rgb(253, 247, 175);
+}
+
+#individual-tab{
+    border-radius: 8px;
+}
+#industry-tab{
+    border-radius: 8px;
+}
