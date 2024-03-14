@@ -18,7 +18,186 @@ border-radius:15px;
 display: inline-block;
 padding:10px
 `;
+const Calculator = () => {
+  const [inputValues, setInputValues] = useState(["", "", "", "", ""]);
+  const [total, setTotal] = useState("");
+  const [activeTab, setActiveTab] = useState(0);
 
+  const handleTabChange = (event, newValue) => {
+    setActiveTab(newValue);
+    setInputValues(["", "", "", "", ""]); // Reset input values when switching tabs
+    setTotal("");
+  };
+  const data = [
+    { x: "Electricity", y: 0 },
+    { x: "text", y: 3 },
+    { x: "text2", y: 50 },
+    {x:"text3",y:12}
+    // Add more data points as needed
+  ];
+  const data1 = [
+    { x: "Electricity", y: inputValues[0]},
+    { x: "text", y: inputValues[1] },
+    { x: "text2", y: inputValues[2] },
+    {x:"text3",y:inputValues[3]}
+    // Add more data points as needed
+  ];
+  // const data1 = inputValues.map((value, index) => ({ y: `Data ${index + 1}`, x: '' }));
+
+  const handleInputChange = (event, index) => {
+    const newInputValues = [...inputValues];
+    newInputValues[index] = event.target.value;
+    setInputValues(newInputValues);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const sum = inputValues.reduce((acc, currentValue, index) => {
+      const number = parseFloat(currentValue);
+      if (!isNaN(number)) {
+        switch (activeTab) {
+          case 0:
+            switch (index) {
+              case 0:
+                return acc + number * 0.85;
+              case 1:
+                return acc + number * 3.5;
+              case 2:
+                return acc + number * 0;
+              case 3:
+                return acc + number * 8;
+              case 4:
+                return acc + number * 10;
+              default:
+                return acc;
+            }
+          case 1:
+            return acc + number;
+          default:
+            return acc;
+        }
+      }
+      return acc;
+    }, 0);
+
+    setTotal(sum);
+  };
+
+  
+  return (
+    <div className="formbox">
+      <h2 id='h2'>Fill The required Data</h2>
+      <Tabs
+        value={activeTab}
+        onChange={handleTabChange}
+        aria-label="tabs example"
+      >
+        <Tab label="Individual" id="individual-tab" />
+        <Tab label="Industry" id="industry-tab" />
+      </Tabs>
+      <form className="form" onSubmit={handleSubmit}>
+      {activeTab === 0 && (
+            
+                      <>
+                        <div>
+                            
+                          <label>
+                            Electricity {'('}in Kwh{')'}:
+                            <input
+                              id="input"
+                              type="number"
+                              value={inputValues[0]}
+                              onChange={(event) => handleInputChange(event, 0)}
+                            />
+                          </label>
+                        </div>
+                        <div>
+                          <label>
+                            Waste Production {'('}in Kg{')'}:
+                            <input
+                              id="input"
+                              type="number"
+                              value={inputValues[1]}
+                              onChange={(event) => handleInputChange(event, 1)}
+                            />
+                          </label>
+                        </div>
+                        <div>
+                          <label>
+                            Water Consumption {'('}in L{')'}:
+                            <input
+                              id="input"
+                              type="number"
+                              value={inputValues[2]}
+                              onChange={(event) => handleInputChange(event, 2)}
+                            />
+                          </label>
+                        </div>
+                        <div>
+                          <label>
+                            LPG {'('}in Kg{')'}:
+                            <input
+                              id="input"
+                              type="number"
+                              value={inputValues[3]}
+                              onChange={(event) => handleInputChange(event, 3)}
+                            />
+                          </label>
+                        </div>
+                        <div>
+                          <label>
+                            Transportation {'('}in Km{')'}:
+                            <input
+                              id="input"
+                              type="number"
+                              value={inputValues[4]}
+                              onChange={(event) => handleInputChange(event, 4)}
+                            />
+                          </label>
+                        </div>
+                        
+                      </>
+                    )}
+                    {activeTab === 1 && (
+                      <>
+                        <div>
+                            
+                          <label>
+                            Agriculture Waste:
+                            <input
+                              id="input"
+                              type="number"
+                              value={inputValues[0]}
+                              onChange={(event) => handleInputChange(event, 0)}
+                            />
+                          </label>
+                        </div>
+                        <div>
+                          <label>
+                            Water Consumption:
+                            <input
+                              id="input"
+                              type="number"
+                              value={inputValues[1]}
+                              onChange={(event) => handleInputChange(event, 1)}
+                            />
+                          </label>
+                        </div>
+                        {/* Add more inputs for industry as needed */}
+                      </>
+                    )}
+        <button type="submit">Calculate Total</button>
+      </form>
+      {/* Display total */}
+      <StyledX>Total: {total}</StyledX>
+      {total && <PieChart total={total} activeTab={activeTab} inputValues={inputValues[0]} inputValues1={inputValues[1]} inputValues2={inputValues[2]} inputValues3={inputValues[3]} inputValues4={inputValues[4]}/>}
+      <LineGraph data={data} data1={data1} />
+    </div>
+  );
+};
+
+export default Calculator;
 
 
 // const Calculator = () => {
@@ -186,194 +365,6 @@ padding:10px
 
 
 
-
-// import React, { useState } from "react";
-// import Tabs from "@mui/material/Tabs";
-// import Tab from "@mui/material/Tab";
-// import PieChart from "./PieChart";
-
-const Calculator = () => {
-  const [inputValues, setInputValues] = useState(["", "", "", "", ""]);
-  const [total, setTotal] = useState("");
-  const [activeTab, setActiveTab] = useState(0);
-
-  const handleTabChange = (event, newValue) => {
-    setActiveTab(newValue);
-    setInputValues(["", "", "", "", ""]); // Reset input values when switching tabs
-    setTotal("");
-  };
-  const data = [
-    { x: "Electricity", y: 0 },
-    { x: "text", y: 3 },
-    { x: "text2", y: 50 },
-    {x:"text3",y:12}
-    // Add more data points as needed
-  ];
-  const data1 = [
-    { x: "Electricity", y: inputValues[0]},
-    { x: "text", y: inputValues[1] },
-    { x: "text2", y: inputValues[2] },
-    {x:"text3",y:inputValues[3]}
-    // Add more data points as needed
-  ];
-  // const data1 = inputValues.map((value, index) => ({ y: `Data ${index + 1}`, x: '' }));
-
-  const handleInputChange = (event, index) => {
-    const newInputValues = [...inputValues];
-    newInputValues[index] = event.target.value;
-    setInputValues(newInputValues);
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    const sum = inputValues.reduce((acc, currentValue, index) => {
-      const number = parseFloat(currentValue);
-      if (!isNaN(number)) {
-        switch (activeTab) {
-          case 0:
-            switch (index) {
-              case 0:
-                return acc + number * 0.85;
-              case 1:
-                return acc + number * 3.5;
-              case 2:
-                return acc + number * 0;
-              case 3:
-                return acc + number * 8;
-              case 4:
-                return acc + number * 10;
-              default:
-                return acc;
-            }
-          case 1:
-            return acc + number;
-          default:
-            return acc;
-        }
-      }
-      return acc;
-    }, 0);
-
-    setTotal(sum);
-  };
-
-  
-  return (
-    <div className="formbox">
-      <h2>Fill The required Data</h2>
-      <Tabs
-        value={activeTab}
-        onChange={handleTabChange}
-        aria-label="tabs example"
-      >
-        <Tab label="Individual" id="individual-tab" />
-        <Tab label="Industry" id="industry-tab" />
-      </Tabs>
-      <form className="form" onSubmit={handleSubmit}>
-      {activeTab === 0 && (
-            
-                      <>
-                        <div>
-                            
-                          <label>
-                            Electricity {'('}in Kwh{')'}:
-                            <input
-                              id="input"
-                              type="number"
-                              value={inputValues[0]}
-                              onChange={(event) => handleInputChange(event, 0)}
-                            />
-                          </label>
-                        </div>
-                        <div>
-                          <label>
-                            Waste Production {'('}in Kg{')'}:
-                            <input
-                              id="input"
-                              type="number"
-                              value={inputValues[1]}
-                              onChange={(event) => handleInputChange(event, 1)}
-                            />
-                          </label>
-                        </div>
-                        <div>
-                          <label>
-                            Water Consumption {'('}in L{')'}:
-                            <input
-                              id="input"
-                              type="number"
-                              value={inputValues[2]}
-                              onChange={(event) => handleInputChange(event, 2)}
-                            />
-                          </label>
-                        </div>
-                        <div>
-                          <label>
-                            LPG {'('}in Kg{')'}:
-                            <input
-                              id="input"
-                              type="number"
-                              value={inputValues[3]}
-                              onChange={(event) => handleInputChange(event, 3)}
-                            />
-                          </label>
-                        </div>
-                        <div>
-                          <label>
-                            Transportation {'('}in Km{')'}:
-                            <input
-                              id="input"
-                              type="number"
-                              value={inputValues[4]}
-                              onChange={(event) => handleInputChange(event, 4)}
-                            />
-                          </label>
-                        </div>
-                        
-                      </>
-                    )}
-                    {activeTab === 1 && (
-                      <>
-                        <div>
-                            
-                          <label>
-                            Agriculture Waste:
-                            <input
-                              id="input"
-                              type="number"
-                              value={inputValues[0]}
-                              onChange={(event) => handleInputChange(event, 0)}
-                            />
-                          </label>
-                        </div>
-                        <div>
-                          <label>
-                            Water Consumption:
-                            <input
-                              id="input"
-                              type="number"
-                              value={inputValues[1]}
-                              onChange={(event) => handleInputChange(event, 1)}
-                            />
-                          </label>
-                        </div>
-                        {/* Add more inputs for industry as needed */}
-                      </>
-                    )}
-        <button type="submit">Calculate Total</button>
-      </form>
-      {/* Display total */}
-      <StyledX>Total: {total}</StyledX>
-      {total && <PieChart total={total} activeTab={activeTab} inputValues={inputValues[0]} inputValues1={inputValues[1]} inputValues2={inputValues[2]} inputValues3={inputValues[3]} inputValues4={inputValues[4]}/>}
-      <LineGraph data={data} data1={data1} />
-    </div>
-  );
-};
-
-export default Calculator;
-
-// export default Calculator;
 
 
 

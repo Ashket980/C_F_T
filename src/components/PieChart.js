@@ -15,7 +15,7 @@ const PieChart = ({ total, activeTab , inputValues,inputValues1,inputValues2,inp
             { x: "Water Consumption", y: inputValues2*total },
             { x: "LPG", y: inputValues3 * total },
             { x: "Transportation", y: inputValues4 * total },
-          ]
+          ].filter(dataPoint => dataPoint.y !== 0)
         : [
             { x: "Agriculture Waste", y: total },
             { x: "Water Consumption", y: total },
