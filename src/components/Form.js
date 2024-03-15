@@ -187,7 +187,7 @@ const Calculator = () => {
                         {/* Add more inputs for industry as needed */}
                       </>
                     )}
-        <button type="submit">Calculate Total</button>
+        <button type="submit" className='button'>Calculate Total</button>
       </form>
       {/* Display total */}
       <StyledX>Total: {total}</StyledX>
