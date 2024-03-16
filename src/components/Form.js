@@ -276,7 +276,6 @@ const Calculator = () => {
         <Tab label="Industry" id="industry-tab" />
       </Tabs>
       <form className="form" onSubmit={handleSubmit}>
-<<<<<<< HEAD
         {activeTab === 0 && (
           <>
             <div>
@@ -454,7 +453,6 @@ const Calculator = () => {
                         {/* Add more inputs for industry as needed */}
                       </>
                     )}
->>>>>>> c7ad9dad5d71d85b6d603e80ee1e17256146d4c0
         <button type="submit" className='button'>Calculate Total</button>
       </form>
       {/* Display total */}
