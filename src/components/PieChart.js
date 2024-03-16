@@ -28,7 +28,7 @@ const PieChart = ({ total, activeTab , inputValues,inputValues1,inputValues2,inp
     <div id="pie">
       {activeTab === 0 && (
         <div>
-          <h2>Total Individual Data Distribution</h2>
+          <h2>Individual Data Distribution</h2>
           <VictoryPie
             data={data}
             colorScale={[
@@ -46,7 +46,7 @@ const PieChart = ({ total, activeTab , inputValues,inputValues1,inputValues2,inp
       )}
       {activeTab === 1 && (
         <div>
-          <h2>Total Industry Data Distribution</h2>
+          <h2>Industry Data Distribution</h2>
           <VictoryPie
             data={data}
             colorScale={["#FF6384", "#36A2EB"]}

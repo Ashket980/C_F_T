@@ -46,6 +46,10 @@
     .form input {
       width: calc(100% - 1rem); /* Adjusted width for smaller screens */
     }
+
+    .button{
+      display: block;
+    }
   }
   
   #input {

@@ -1,0 +1,30 @@
+/* styles.css */
+
+.chart-container {
+    display: flex;
+    max-width: 850px;
+    margin: auto;
+  }
+  
+  .chart-description {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .chart {
+    flex: 2;
+  }
+  
+  @media screen and (max-width: 850px) {
+    .chart-container {
+      flex-direction: column;
+    }
+    .chart-description {
+        order: 2; /* Move description below chart */
+      }
+    
+      .chart {
+        order: 1; /* Move chart above description */
+      }
+  }
+  
