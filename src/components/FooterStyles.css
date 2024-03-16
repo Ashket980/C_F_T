@@ -61,5 +61,7 @@
     .bottom div{
         width: 50%;
     }
-    
+    .button{
+      display: block;
+    }
 }
