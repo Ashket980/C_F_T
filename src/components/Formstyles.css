@@ -26,12 +26,13 @@
   
   .form input {
     height: 2rem; /* Increased height for better visibility */
-    padding: 0 1rem;
+    padding: 0 2rem;
     margin-bottom: 1.5rem; /* Reduced margin bottom */
     border-radius: 0.3rem;
     border: 1px solid #2a2a2a;
     accent-color: rgb(5, 226, 5);
-    width: calc(50% - 1rem); /* Adjusted width for two inputs in a row */
+    /* width: calc(50% - 1rem); Adjusted width for two inputs in a row */
+    width: 10rem;
   }
   
 

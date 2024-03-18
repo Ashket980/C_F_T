@@ -4,10 +4,16 @@ import './Bargraphstyles.css';
 
 const data = [
   { flavor: 'Electricity', blue: 3, red: 9 },
-  { flavor: 'waste', blue: 7, red: 3 },
+  { flavor: 'waste', blue: 5, red: 3 },
   { flavor: 'text1', blue: 4, red: 5 },
   { flavor: 'text2', blue: 4, red: 5 },
   { flavor: 'text3', blue: 4, red: 5 },
+  { flavor: 'text4', blue: 4, red: 5 },
+  { flavor: 'text5', blue: 4, red: 5 },
+  { flavor: 'text6', blue: 4, red: 5 },
+  { flavor: 'text7', blue: 4, red: 5 },
+  { flavor: 'text8', blue: 4, red: 5 },
+  { flavor: 'text9', blue: 4, red: 5 },
 ];
 
 const GroupedBarChart = () => (
@@ -18,7 +24,7 @@ const GroupedBarChart = () => (
     </div>
     <div className="chart">
       <VictoryChart domainPadding={25}>
-        <VictoryAxis tickValues={[1, 2, 3, 4, 5]} tickFormat={['Electricity', 'text', 'text', 'text', 'text']} />
+        <VictoryAxis tickValues={[1, 2, 3, 4, 5,6,7,8,9,10,11]} tickFormat={['Electricity', 'Waste', 'LPG', 'Car', 'Bus', 'Train', 'TV', 'Plastic', 'Smartphone', 'New car', 'Computer']} />
         <VictoryAxis dependentAxis />
         <VictoryGroup offset={20}>
           <VictoryBar data={data} x="flavor" y="blue" style={{ data: { fill: 'blue' } }} />
@@ -40,3 +46,5 @@ const GroupedBarChart = () => (
 );
 
 export default GroupedBarChart;
+
+

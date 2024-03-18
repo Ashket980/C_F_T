@@ -242,19 +242,50 @@ const Calculator = () => {
                 return acc + number * 0.85;
               case 1:
                 return acc + number * 3.5;
-              case 2:
-                return acc + number * 0;
+              // case 2:
+                // return acc + number * 0;
               case 3:
                 return acc + number * 2.983;
               case 4:
-                return acc + number * 0;
+                return acc + number * 0.381;//CAR
+              case 5:
+                return acc + number * 0.0376;//BUS
+              case 6:
+                return acc + number * 0.167;//TRAIN
+              case 7:
+                return acc + number * 0.2555;//TV
+              case 8:
+                return acc + number *5.525; //PLASTIC
+              case 9:
+                return acc + number * 0.191; //MOBILE
+              case 10:
+                return acc + number * 12000; //NEW CAR
+              case 11:
+                return acc + number * 329 ; //LAPTOP
+              case 12:
+                return acc + number * 0.043; //LAPTOP usage
               default:
                 return acc;
             }
           case 1:
-            return acc + number;
-          default:
-            return acc;
+            switch (index) {
+              case 0:
+                return acc + number;
+              case 1:
+                  return acc + number;
+              case 2:
+                return acc + number *2000;
+              case 3:
+                return acc + number *8400000;
+              case 4:
+                return acc + number *30;
+              case 5:
+                return acc + number *12500;
+              case 6:
+                return acc + number *0.4;
+              default:
+                return acc;
+            }
         }
       }
       return acc;
@@ -276,7 +307,6 @@ const Calculator = () => {
         <Tab label="Industry" id="industry-tab" />
       </Tabs>
       <form className="form" onSubmit={handleSubmit}>
-<<<<<<< HEAD
         {activeTab === 0 && (
           <>
             <div>
@@ -301,7 +331,7 @@ const Calculator = () => {
                 />
               </label>
             </div>
-            <div>
+            {/* <div>
               <label>
                 Water Consumption {'('}in L{')'}:
                 <input
@@ -311,7 +341,7 @@ const Calculator = () => {
                   onChange={(event) => handleInputChange(event, 2)}
                 />
               </label>
-            </div>
+            </div> */}
             <div>
               <label>
                 LPG {'('}in Kg{')'}:
@@ -325,12 +355,100 @@ const Calculator = () => {
             </div>
             <div>
               <label>
-                Transportation {'('}in Km{')'}:
+                Car {'('}in Km{')'}:
                 <input
                   id="input"
                   type="number"
                   value={inputValues[4]}
                   onChange={(event) => handleInputChange(event, 4)}
+                />
+              </label>
+            </div>
+            <div>
+              <label>
+                Bus {'('}in Km{')'}:
+                <input
+                  id="input"
+                  type="number"
+                  value={inputValues[5]}
+                  onChange={(event) => handleInputChange(event, 5)}
+                />
+              </label>
+            </div>
+            <div>
+              <label>
+                Train {'('}in Km{')'}:
+                <input
+                  id="input"
+                  type="number"
+                  value={inputValues[6]}
+                  onChange={(event) => handleInputChange(event, 6)}
+                />
+              </label>
+            </div>
+            <div>
+              <label>
+                Watching TV {'('}in hrs{')'}:
+                <input
+                  id="input"
+                  type="number"
+                  value={inputValues[7]}
+                  onChange={(event) => handleInputChange(event, 7)}
+                />
+              </label>
+            </div>
+            <div>
+              <label>
+                Plastic Consumption {'('}in kg{')'}:
+                <input
+                  id="input"
+                  type="number"
+                  value={inputValues[8]}
+                  onChange={(event) => handleInputChange(event, 8)}
+                />
+              </label>
+            </div>
+            <div>
+              <label>
+                Smartphones usage {'('}in hrs{')'}:
+                <input
+                  id="input"
+                  type="number"
+                  value={inputValues[9]}
+                  onChange={(event) => handleInputChange(event, 9)}
+                />
+              </label>
+            </div>
+            <div>
+              <label>
+                New Car {'('}in nos{')'}:
+                <input
+                  id="input"
+                  type="number"
+                  value={inputValues[10]}
+                  onChange={(event) => handleInputChange(event, 10)}
+                />
+              </label>
+            </div>
+            <div>
+              <label>
+                Computer and Laptop {'('}in nos{')'}:
+                <input
+                  id="input"
+                  type="number"
+                  value={inputValues[11]}
+                  onChange={(event) => handleInputChange(event, 11)}
+                />
+              </label>
+            </div>
+            <div>
+              <label>
+                Pc usage duration {'('}in hrs{')'}:
+                <input
+                  id="input"
+                  type="number"
+                  value={inputValues[12]}
+                  onChange={(event) => handleInputChange(event, 12)}
                 />
               </label>
             </div>
@@ -360,119 +478,149 @@ const Calculator = () => {
                 />
               </label>
             </div>
+            <div>
+              <label>
+                Deforestation {'('}in hectare{')'}:
+                <input
+                  id="input"
+                  type="number"
+                  value={inputValues[2]}
+                  onChange={(event) => handleInputChange(event, 2)}
+                />
+              </label>
+            </div>
+            <div>
+              <label>
+                A New Coal Mine {'('}in nos{')'}:
+                <input
+                  id="input"
+                  type="number"
+                  value={inputValues[3]}
+                  onChange={(event) => handleInputChange(event, 3)}
+                />
+              </label>
+            </div>
+            <div>
+              <label>
+                Wind Turbine-Iinstallation {'('}in nos{')'}:
+                <input
+                  id="input"
+                  type="number"
+                  value={inputValues[4]}
+                  onChange={(event) => handleInputChange(event, 4)}
+                />
+              </label>
+            </div>
+            <div>
+              <label>
+                Solar Panels-installation {'('}in MW{')'}:
+                <input
+                  id="input"
+                  type="number"
+                  value={inputValues[5]}
+                  onChange={(event) => handleInputChange(event, 5)}
+                />
+              </label>
+            </div>
+            <div>
+              <label>
+                Steel consumption/production {'('}in tons{')'}:
+                <input
+                  id="input"
+                  type="number"
+                  value={inputValues[6]}
+                  onChange={(event) => handleInputChange(event, 6)}
+                />
+              </label>
+            </div>
             {/* Add more inputs for industry as needed */}
           </>
         )}
-=======
-      {activeTab === 0 && (
-            
-                      <>
-                        <div>
-                            
-                          <label>
-                            Electricity {'('}in Kwh{')'}:
-                            <input
-                              id="input"
-                              type="number"
-                              value={inputValues[0]}
-                              onChange={(event) => handleInputChange(event, 0)}
-                            />
-                          </label>
-                        </div>
-                        <div>
-                          <label>
-                            Waste Production {'('}in Kg{')'}:
-                            <input
-                              id="input"
-                              type="number"
-                              value={inputValues[1]}
-                              onChange={(event) => handleInputChange(event, 1)}
-                            />
-                          </label>
-                        </div>
-                        <div>
-                          <label>
-                            Water Consumption {'('}in L{')'}:
-                            <input
-                              id="input"
-                              type="number"
-                              value={inputValues[2]}
-                              onChange={(event) => handleInputChange(event, 2)}
-                            />
-                          </label>
-                        </div>
-                        <div>
-                          <label>
-                            LPG {'('}in Kg{')'}:
-                            <input
-                              id="input"
-                              type="number"
-                              value={inputValues[3]}
-                              onChange={(event) => handleInputChange(event, 3)}
-                            />
-                          </label>
-                        </div>
-                        <div>
-                          <label>
-                            Transportation {'('}in Km{')'}:
-                            <input
-                              id="input"
-                              type="number"
-                              value={inputValues[4]}
-                              onChange={(event) => handleInputChange(event, 4)}
-                            />
-                          </label>
-                        </div>
-                        
-                      </>
-                    )}
-                    {activeTab === 1 && (
-                      <>
-                        <div>
-                            
-                          <label>
-                            Agriculture Waste:
-                            <input
-                              id="input"
-                              type="number"
-                              value={inputValues[0]}
-                              onChange={(event) => handleInputChange(event, 0)}
-                            />
-                          </label>
-                        </div>
-                        <div>
-                          <label>
-                            Water Consumption:
-                            <input
-                              id="input"
-                              type="number"
-                              value={inputValues[1]}
-                              onChange={(event) => handleInputChange(event, 1)}
-                            />
-                          </label>
-                        </div>
-                        {/* Add more inputs for industry as needed */}
-                      </>
-                    )}
->>>>>>> c7ad9dad5d71d85b6d603e80ee1e17256146d4c0
+
         <button type="submit" className='button'>Calculate Total</button>
       </form>
       {/* Display total */}
       <StyledX>Total: {total}</StyledX>
       <div style={{ display: 'flex' }}>
-        {total && <PieChart total={total} activeTab={activeTab} inputValues={inputValues[0]} inputValues1={inputValues[1]} inputValues2={inputValues[2]} inputValues3={inputValues[3]} inputValues4={inputValues[4]} />}
-        {total && <PieChart1/>}
+        {total && <PieChart total={total} activeTab={activeTab} inputValues={inputValues[0]} inputValues1={inputValues[1]} inputValues2={inputValues[2]} inputValues3={inputValues[3]} inputValues4={inputValues[4]} inputValues5={inputValues[5]} inputValues6={inputValues[6]} inputValues7={inputValues[7]} inputValues8={inputValues[8]} inputValues9={inputValues[9]} inputValues10={inputValues[10]} inputValues11={inputValues[11]} inputValues12={inputValues[12]}/>}
+        {total && <PieChart1 />}
       </div>
       
     </div>
     <div>
-    <GroupedBarChart />
+    
+    <GroupedBarChart total={total} activeTab={activeTab} inputValues={inputValues[0]} inputValues1={inputValues[1]} inputValues2={inputValues[2]} inputValues3={inputValues[3]} />
     </div>
     </>
   );
 };
 
 export default Calculator;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
