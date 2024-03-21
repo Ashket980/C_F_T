@@ -47,4 +47,3 @@ const GroupedBarChart = () => (
 
 export default GroupedBarChart;
 
-

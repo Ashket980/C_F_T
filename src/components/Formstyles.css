@@ -14,7 +14,7 @@
     background-repeat: no-repeat;
     padding: 25px;
     border-radius: 20px;
-    max-width: 850px; /* Limit the maximum width */
+    max-width: 1150px; /* Limit the maximum width */
   }
   
   .form-row {
@@ -66,4 +66,23 @@
   #industry-tab {
     border-radius: 8px;
   }
-  
+  #Primary{
+
+    border-radius: 8px;
+  }
+  #Comsumer{
+    border-radius: 8px;
+
+  }
+  #Food{
+    border-radius: 8px;
+
+  }
+  #Luxuiries{
+    border-radius: 8px;
+
+  }
+  #Others{
+    border-radius: 8px;
+
+  }
