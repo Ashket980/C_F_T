@@ -1,88 +1,56 @@
 .form {
-    padding-top: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center align items */
-    width: 70%; /* Adjusted width for better responsiveness */
-    margin: auto;
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+}
+
+.formbox {
+  margin: 4rem auto;
+  color: #2a2a2a;
+  background-image: url(https://cdn.dribbble.com/users/2161686/screenshots/15263769/dribbble_tropicalbg.jpg);
+  background-repeat: no-repeat;
+  padding: 25px;
+  border-radius: 20px;
+  max-width: 1150px;
+}
+
+.form input {
+  height: 2rem;
+  padding: 0 2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.3rem;
+  border: 1px solid #2a2a2a;
+  accent-color: rgb(5, 226, 5);
+  width: 10rem;
+}
+
+@media screen and (max-width: 850px) {
+  .form {
+    width: 90%;
   }
-  
-  .formbox {
-    margin: 4rem auto; /* Center align the formbox */
-    color: #2a2a2a;
-    background-image: url(https://cdn.dribbble.com/users/2161686/screenshots/15263769/dribbble_tropicalbg.jpg);
-    background-repeat: no-repeat;
-    padding: 25px;
-    border-radius: 20px;
-    max-width: 1150px; /* Limit the maximum width */
-  }
-  
-  .form-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Distribute items evenly */
-    width: 100%; /* Set width to 100% */
-  }
-  
+
   .form input {
-    height: 2rem; /* Increased height for better visibility */
-    padding: 0 2rem;
-    margin-bottom: 1.5rem; /* Reduced margin bottom */
-    border-radius: 0.3rem;
-    border: 1px solid #2a2a2a;
-    accent-color: rgb(5, 226, 5);
-    /* width: calc(50% - 1rem); Adjusted width for two inputs in a row */
-    width: 10rem;
+    width: calc(100% - 1rem);
   }
+}
+
+#input {
+  height: 30px;
+  border: 2px solid greenyellow;
+  background-color: rgb(253, 247, 175);
+}
+
+#individual-tab,
+#industry-tab,
+#Primary,
+#Comsumer,
+#Food,
+#Luxuries,
+#Others {
+  border-radius: 8px;
+}
+
   
-
-
-
-  /* Added media query for responsiveness */
-  @media screen and (max-width: 850px) {
-    .form {
-      width: 90%; /* Adjusted width for smaller screens */
-    }
-  
-    .form input {
-      width: calc(100% - 1rem); /* Adjusted width for smaller screens */
-    }
-
-    .button{
-      display: block;
-    }
-  }
-  
-  #input {
-    height: 30px;
-    border: 2px solid greenyellow;
-    background-color: rgb(253, 247, 175);
-  }
-  
-  #individual-tab {
-    border-radius: 8px;
-  }
-  
-  #industry-tab {
-    border-radius: 8px;
-  }
-  #Primary{
-
-    border-radius: 8px;
-  }
-  #Comsumer{
-    border-radius: 8px;
-
-  }
-  #Food{
-    border-radius: 8px;
-
-  }
-  #Luxuiries{
-    border-radius: 8px;
-
-  }
-  #Others{
-    border-radius: 8px;
-
-  }

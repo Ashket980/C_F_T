@@ -384,6 +384,8 @@ const Calculator = () => {
         value={activeTab}
         onChange={handleTabChange}
         aria-label="tabs example"
+        variant="scrollable" // Allow tabs to be scrollable
+        scrollButtons="auto"
       >
         <Tab label="Individual" id="individual-tab" />
         <Tab label="Industry" id="industry-tab" />
