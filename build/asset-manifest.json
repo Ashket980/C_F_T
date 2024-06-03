@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Ashket980/C_F_T/static/css/main.9d4f8d72.css",
+    "main.js": "/Ashket980/C_F_T/static/js/main.1c57795b.js",
+    "service-worker.js": "/Ashket980/C_F_T/service-worker.js",
+    "index.html": "/Ashket980/C_F_T/index.html",
+    "main.9d4f8d72.css.map": "/Ashket980/C_F_T/static/css/main.9d4f8d72.css.map",
+    "main.1c57795b.js.map": "/Ashket980/C_F_T/static/js/main.1c57795b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9d4f8d72.css",
+    "static/js/main.1c57795b.js"
+  ]
+}

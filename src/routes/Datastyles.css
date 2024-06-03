@@ -1,0 +1,179 @@
+.tableContainer {
+  margin-top: 20px;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #c9f59f;
+}
+
+tr:nth-child(even) {
+  background-color: #f4fcde;
+}
+
+tr:hover {
+  background-color: #defca5;
+}
+
+
+
+.data-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-image: url('https://images.unsplash.com/photo-1613832187362-30fbc695074d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGdyZWVuJTIwdGV4dHVyZXxlbnwwfDB8MHx8fDA%3D');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  /* Change text color to white for better visibility */
+}
+
+.data-container h1,
+.data-container h2,
+.data-container p {
+  color: #fff;
+  /* Change text color to white for better visibility */
+}
+
+.data-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  color: #333;
+  /* Change table text color to black for better readability */
+}
+
+
+
+
+.totalContainer {
+  display: inline-block;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.background-image {
+  /* background-image: url(''); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+
+
+
+
+
+/* BarChart */
+.react-chartjs-2 {
+  background-color: #b6de06;
+  /* Very light pink background */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  /* Add some margin at the bottom */
+}
+
+/* Bar color */
+.react-chartjs-2 .bar {
+  background-color: #c00659;
+  /* Pink color for bars */
+}
+
+/* Grid color */
+.react-chartjs-2 .grid {
+  stroke: #d12424;
+  /* Light gray color for grid lines */
+}
+
+/* Axis label color */
+.react-chartjs-2 .axis-label {
+  fill: #d30a0a;
+  /* Dark gray color for axis labels */
+}
+
+/* Bar value color */
+.react-chartjs-2 .bar-value {
+  fill: #bb0808;
+  /* Dark color for bar values */
+}
+
+
+
+.highlighted-row {
+  background-color: rgb(245, 203, 203);
+  /* Highlighted row color (yellow) */
+}
+
+
+.Analysis {
+  text-align: left;
+  padding: 30px;
+}
+
+.Analysis p {
+  padding-left: 35px;
+}
+
+
+
+.analysis {
+  margin-top: 20px; /* Adjust as needed */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D);
+padding-bottom: 50px;
+}
+
+
+
+.analysis-graph-container {
+  margin-top: 20px; /* Adjust as needed */
+  position: relative;
+}
+.analysis-graph-container::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 10px); /* Adjust as needed */
+  left: 0;
+  width: 100%;
+  height: 2px; /* Thickness of the line */
+  background-color: #000; /* Line color */
+}
+
+.morestats{
+  padding: 20px;
+}
+
+
+
+
+.Precautions{
+  padding: 20px;
+}
+
+.back-btn{
+  padding: 20px;
+}
+
+.formula-pg{
+  padding: 20px;
+}

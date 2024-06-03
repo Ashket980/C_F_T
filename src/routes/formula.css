@@ -1,0 +1,64 @@
+ /* formula.css */
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+    /* padding: 20px; */
+    background-image: url(https://images.unsplash.com/photo-1487147264018-f937fba0c817?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  /* Headings */
+  h3 {
+    margin-top: 20px;
+  }
+  
+  /* List items */
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  /* Table */
+  .table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  
+  .table th, .table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .table th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Button */
+  .button-container {
+    margin-top: 20px;
+  }
+  
+  /* Button style */
+  .button-container button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .button-container button:hover {
+    background-color: #45a049;
+  }
+  

@@ -1,0 +1,33 @@
+/* styles.css */
+
+.chart-container {
+    display: flex;
+    max-width: 850px;
+    margin: auto;
+    background-image: url(https://images.unsplash.com/photo-1487147264018-f937fba0c817?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .chart-description {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .chart {
+    flex: 2;
+  }
+  
+  @media screen and (max-width: 850px) {
+    .chart-container {
+      flex-direction: column;
+    }
+    .chart-description {
+        order: 2; /* Move description below chart */
+      }
+    
+      .chart {
+        order: 1; /* Move chart above description */
+      }
+  }
+  
